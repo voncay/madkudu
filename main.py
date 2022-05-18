@@ -31,4 +31,4 @@ c = conn.cursor()
 c.execute('''CREATE TABLE events (id,timestamp,email,country,ip,uri,action,tags)''')
 
 data.to_sql('events', conn, if_exists='append', index = False)
-c.execute('''SELECT * FROM events ORDER BY ROWID ASC LIMIT 1''').fetchall()
+c.execute('''SELECT * FROM events''').fetchall()
